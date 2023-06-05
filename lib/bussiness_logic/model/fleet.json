@@ -1,0 +1,21 @@
+{
+    "errno": 0,
+    "errmsg": "Success",
+    "data": [
+        {
+            "id": 1,
+            "plate_no": "B 9298 NEU",
+            "fleet_type_id": {
+                "id": 7,
+                "name": "Wing Box",
+                "is_spk": 1,
+                "parent_id": 0
+            },
+            "sales_type_id": {
+                "id": 2,
+                "name": "Cargo",
+                "company_id": 0
+            }
+        }
+    ]
+}

@@ -1,0 +1,131 @@
+{
+    "errno": 0,
+    "errmsg": "Success",
+    "data": {
+        "primary_driver": {
+            "id": 181,
+            "nik": "2019030117",
+            "name": "SUHENDRA",
+            "alias": "SUHENDRA (EKL)",
+            "company_id": {
+                "id": 2,
+                "code": "ASM",
+                "name": "Alam Sampurna Makmur,PT.",
+                "status": 1
+            },
+            "department_id": {
+                "id": 7,
+                "name": "Sales",
+                "created_at": "2022-11-14T09:25:35+07:00",
+                "updated_at": "2022-11-14T09:25:35+07:00",
+                "deleted_at": "0001-01-01T00:00:00Z"
+            },
+            "division_id": {
+                "id": 6,
+                "name": "Dump Truck",
+                "created_at": "2022-11-14T09:27:02+07:00",
+                "updated_at": "2023-05-22T06:54:23+07:00",
+                "deleted_at": "0001-01-01T00:00:00Z"
+            },
+            "occupation_id": {
+                "id": 6,
+                "name": "Driver",
+                "created_at": "2022-11-14T09:27:42+07:00",
+                "updated_at": "2022-11-14T09:27:42+07:00",
+                "deleted_at": "0001-01-01T00:00:00Z"
+            },
+            "living_address": "KP. CIBULUHEUN RT 003/009 DESA TAMANSARI KECAMATAN RUMPIN KABUPATEN BOGOR",
+            "phone": "85890147553",
+            "emergency_phone": "85794097617",
+            "emergency_name": "MURTAFIYAH",
+            "emergency_relation": "Istri",
+            "emergency_inhouse_phone": "85781366695",
+            "emergency_inhouse_name": "ASEP",
+            "emergency_inhouse_relation": "ADIK",
+            "city_id": {
+                "id": 5661,
+                "name": "Rumpin, Kab. Bogor, Jawa Barat"
+            },
+            "zip": "42178",
+            "kartu_keluarga": "",
+            "bpjs": "",
+            "bpjs_tk": "",
+            "ktp": "3201181001900000",
+            "ktp_address": "KP. CIBULUHEUN RT 003/009 DESA TAMANSARI KECAMATAN RUMPIN KABUPATEN BOGOR",
+            "marriage": 1,
+            "husband_wife_name": "MURTAFIYAH",
+            "children": 2,
+            "sex": "Male",
+            "religion": "Islam",
+            "place_of_birth": "BOGOR",
+            "date_of_birth": "1990-01-10",
+            "npwp": "900",
+            "npwp_status": "TK0",
+            "license_no": "900113481276",
+            "license_type": "B2 Umum",
+            "license_city_id": {
+                "id": 5661,
+                "name": "Rumpin, Kab. Bogor, Jawa Barat"
+            },
+            "license_issue_date": "2019-06-28",
+            "license_exp_date": null,
+            "license_card": 1,
+            "license_on_hold": 1,
+            "license_handover_date": null,
+            "parent_id": {
+                "id": 0,
+                "code": "",
+                "name": "",
+                "status": 0
+            },
+            "status_employee": "Mitra Kerja",
+            "status_expired_date": null,
+            "bank_id": {
+                "id": 133,
+                "name": "Bank BCA",
+                "swift": "Bank BCA"
+            },
+            "bank_name": "Bank BCA",
+            "bank_no": "8010469296",
+            "bank_account_name": "SUHENDRA",
+            "join_date": "2019-03-23",
+            "resign_date": null,
+            "resign_memo": "",
+            "pass_code": "",
+            "status": 1,
+            "employee_skorsing": null,
+            "employee_loan": [
+                {
+                    "id": 96
+                },
+                {
+                    "id": 908
+                },
+                {
+                    "id": 1195
+                },
+                {
+                    "id": 1457
+                }
+            ],
+            "employee_memo_pot_current": null,
+            "employee_memo_pot": [
+                {
+                    "id": 1373,
+                    "reference_no": "1230300408",
+                    "ujt": 562200,
+                    "final_ujt": 418096,
+                    "ujt_var": -144104,
+                    "ujt_void": 0,
+                    "bonus_claim": 0,
+                    "loan": 0,
+                    "total": -144104,
+                    "status": "Pending",
+                    "rn": 1
+                }
+            ],
+            "image_data": null
+        },
+        "secondary_driver": null
+    }
+}

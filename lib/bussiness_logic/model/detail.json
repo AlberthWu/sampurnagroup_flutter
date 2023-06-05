@@ -1,0 +1,381 @@
+{
+    "errno": 0,
+    "errmsg": "Success",
+    "data": {
+        "id": 1,
+        "sales_type_id": {
+            "id": 2,
+            "name": "Cargo",
+            "company_id": 0
+        },
+        "company_id": {
+            "id": 3,
+            "code": "NCA",
+            "name": "Niaga Citra Abadi,PT.",
+            "status": 1
+        },
+        "schedule_id": {
+            "id": 4,
+            "schedule_no": "CA2303001",
+            "issue_date": "2023-03-21",
+            "note": "",
+            "total_do": 1,
+            "actual": -1,
+            "balance": 0,
+            "limited": 1,
+            "urgent": 0
+        },
+        "reference_no": "2230300001",
+        "issue_date": "2023-03-21",
+        "pool_id": {
+            "id": 5,
+            "name": "Rorotan",
+            "status": 1
+        },
+        "counter": "A",
+        "shift": 1,
+        "po_id": {
+            "id": 1,
+            "reference_no": "12313124",
+            "price": 0
+        },
+        "order_type_id": {
+            "id": 7,
+            "company_id": 3,
+            "name": "Ongkos Angkut, NCA"
+        },
+        "do_id": 1,
+        "do_no": "",
+        "origin_id": {
+            "id": 58,
+            "code": "EXP",
+            "name": "Export",
+            "status": 1
+        },
+        "customer_id": {
+            "id": 28,
+            "code": "ABT",
+            "name": "Armada Berjaya Trans Tbk,PT.",
+            "status": 1
+        },
+        "plant_id": {
+            "id": 28,
+            "name": "SALIM INVOMAS, PLUIT",
+            "full_name": "ABT - SALIM INVOMAS, PLUIT",
+            "company_id": 28
+        },
+        "multi_product": 0,
+        "product_id": {
+            "id": 12,
+            "name": "Container 1x20",
+            "status": 1,
+            "is_do": 0
+        },
+        "fleet_id": {
+            "id": 94,
+            "plate_no": "B 9199 NEH",
+            "company_id": 0,
+            "company_code": "",
+            "company_name": "",
+            "fleet_type_id": 0,
+            "fleet_type_name": "",
+            "length": 1,
+            "width": 1,
+            "height": 1,
+            "volume": 1,
+            "status": 1
+        },
+        "transporter_id": {
+            "id": 4,
+            "code": "SMS",
+            "name": "Sampurna Makmur Sejahtera,PT.",
+            "status": 1
+        },
+        "fleet_type_id": {
+            "id": 6,
+            "name": "Trailer",
+            "is_spk": 1,
+            "parent_id": 0
+        },
+        "formation_id": {
+            "id": 11,
+            "name": "Trailer",
+            "status": 1,
+            "parent_id": 2
+        },
+        "formation_grup_id": {
+            "id": 2,
+            "name": "Cargo",
+            "status": 1
+        },
+        "employee_id": {
+            "id": 491,
+            "nik": "20220700266",
+            "name": "ANGGA",
+            "alias": "ANGGA (TRELLER)",
+            "bank_id": {
+                "id": 133,
+                "name": "Bank BCA",
+                "swift": "Bank BCA"
+            },
+            "bank_no": "6900420887",
+            "bank_account_name": "ANGGA",
+            "image_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAM8CAIAAAA6H+R4AACAAElEQVR4nOz9CZ7kqM8Fikpkflt/S3q7uAu6/wyj+zMgoQnsiIzsquouOjsqBpvJII6OhPj8//3//x8iAiAAaG/OV3kD/YeW5A0g6q/wTAVwvOMcQLKieWe7ahRH7Q3gyBJBvZGP4xb1sdaqfkLJQddfXlsduXlnkUg9K4S0uFh6T8dxSIbuGtO82UOIo"
+        },
+        "ujt_id": 50,
+        "ujt": 463200,
+        "length": 1,
+        "width": 1,
+        "height": 1,
+        "volume": 1,
+        "weight": 0,
+        "qty": 1,
+        "uom": "Rit",
+        "note": "",
+        "volume_origin": 0,
+        "volume_plant": 0,
+        "volume_netto": 0,
+        "final_shift": 1,
+        "receive_date": "2023-03-21 15:36:25",
+        "return_at": "2023-03-27 16:36:55",
+        "closed_at": "2023-03-27 16:37:14",
+        "price": 0,
+        "subtotal": 0,
+        "vat": 0,
+        "tax": 0,
+        "total": 0,
+        "sj_customer": "",
+        "sj_supplier": "",
+        "no_container": "SEGU1865245",
+        "no_pto": "121SI/P.1",
+        "no_di": "",
+        "by_lift_off": 0,
+        "by_kawal": 0,
+        "by_loading": 0,
+        "by_additional": 0,
+        "memo_additional": "",
+        "confirm_ujt": 1,
+        "confirm_ujt_date": "2023-03-21 10:12:55",
+        "status_id": 11,
+        "status": "Close",
+        "gl_date": "",
+        "status_gl": 0,
+        "period": -1,
+        "returned": 1,
+        "delivered": 0,
+        "delivered_at": null,
+        "shipment_no": "",
+        "shipment_vendor": "",
+        "primary_driver": {
+            "id": 491,
+            "nik": "20220700266",
+            "name": "ANGGA",
+            "alias": "ANGGA (TRELLER)",
+            "company_id": {
+                "id": 4,
+                "code": "SMS",
+                "name": "Sampurna Makmur Sejahtera,PT.",
+                "status": 1
+            },
+            "department_id": {
+                "id": 7,
+                "name": "Sales",
+                "created_at": "2022-11-14T09:25:35+07:00",
+                "updated_at": "2022-11-14T09:25:35+07:00",
+                "deleted_at": "0001-01-01T00:00:00Z"
+            },
+            "division_id": {
+                "id": 7,
+                "name": "Cargo",
+                "created_at": "2022-11-14T09:27:05+07:00",
+                "updated_at": "2022-11-14T09:27:05+07:00",
+                "deleted_at": "0001-01-01T00:00:00Z"
+            },
+            "occupation_id": {
+                "id": 6,
+                "name": "Driver",
+                "created_at": "2022-11-14T09:27:42+07:00",
+                "updated_at": "2022-11-14T09:27:42+07:00",
+                "deleted_at": "0001-01-01T00:00:00Z"
+            },
+            "living_address": "KP",
+            "phone": "895326091492",
+            "emergency_phone": "-",
+            "emergency_name": "-",
+            "emergency_relation": "Istri",
+            "emergency_inhouse_phone": "895326091492",
+            "emergency_inhouse_name": "",
+            "emergency_inhouse_relation": "Istri",
+            "city_id": {
+                "id": 11125,
+                "name": "Kopo, Kab. Serang, Banten"
+            },
+            "zip": "42178",
+            "kartu_keluarga": "",
+            "bpjs": "-",
+            "bpjs_tk": "22133063655",
+            "ktp": "3172020807980000",
+            "ktp_address": "",
+            "marriage": 0,
+            "husband_wife_name": "",
+            "children": 0,
+            "sex": "Male",
+            "religion": "Islam",
+            "place_of_birth": "JAKARTA",
+            "date_of_birth": "1998-07-08",
+            "npwp": "127",
+            "npwp_status": "TK0",
+            "license_no": "",
+            "license_type": "B1",
+            "license_city_id": {
+                "id": 0,
+                "name": ""
+            },
+            "license_issue_date": "2022-10-06",
+            "license_exp_date": null,
+            "license_card": 0,
+            "license_on_hold": 0,
+            "license_handover_date": null,
+            "parent_id": {
+                "id": 0,
+                "code": "",
+                "name": "",
+                "status": 0
+            },
+            "status_employee": "Mitra Kerja",
+            "status_expired_date": null,
+            "bank_id": {
+                "id": 133,
+                "name": "Bank BCA",
+                "swift": "Bank BCA"
+            },
+            "bank_name": "Bank BCA",
+            "bank_no": "6900420887",
+            "bank_account_name": "ANGGA",
+            "join_date": "2022-10-06",
+            "resign_date": null,
+            "resign_memo": "",
+            "pass_code": "",
+            "status": 1,
+            "employee_skorsing": null,
+            "employee_loan": [
+                {
+                    "id": 640
+                },
+                {
+                    "id": 1109
+                }
+            ],
+            "employee_memo_pot_current": null,
+            "employee_memo_pot": null,
+            "image_data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAM8CAIAAAA6H+R4AACAAElEQVR4nOz9CZ7kqM8Fikpkflt/S3q7uAu6/wyj+zMgoQnsiIzsquouOjsqBpvJII6OhPj8//3//x8iAiAAaG/OV3kD/YeW5A0g6q/wTAVwvOMcQLKieWe7ahRH7Q3gyBJBvZGP4xb1sdaqfkLJQddfXlsduXlnkUg9K4S0uFh6T8dxSIbuGtO82UOIo"
+        },
+        "primary_status": 1,
+        "secondary_driver": {
+            "id": 788,
+            "nik": "20230200065",
+            "name": "LALAN",
+            "alias": "LALAN (TRAILER)",
+            "company_id": {
+                "id": 4,
+                "code": "SMS",
+                "name": "Sampurna Makmur Sejahtera,PT.",
+                "status": 1
+            },
+            "department_id": {
+                "id": 7,
+                "name": "Sales",
+                "created_at": "2022-11-14T09:25:35+07:00",
+                "updated_at": "2022-11-14T09:25:35+07:00",
+                "deleted_at": "0001-01-01T00:00:00Z"
+            },
+            "division_id": {
+                "id": 7,
+                "name": "Cargo",
+                "created_at": "2022-11-14T09:27:05+07:00",
+                "updated_at": "2022-11-14T09:27:05+07:00",
+                "deleted_at": "0001-01-01T00:00:00Z"
+            },
+            "occupation_id": {
+                "id": 6,
+                "name": "Driver",
+                "created_at": "2022-11-14T09:27:42+07:00",
+                "updated_at": "2022-11-14T09:27:42+07:00",
+                "deleted_at": "0001-01-01T00:00:00Z"
+            },
+            "living_address": "KP. BABAKAN SADENG 001/005 LEUWISADENG",
+            "phone": "",
+            "emergency_phone": "-",
+            "emergency_name": "-",
+            "emergency_relation": "-",
+            "emergency_inhouse_phone": "",
+            "emergency_inhouse_name": "",
+            "emergency_inhouse_relation": "",
+            "city_id": {
+                "id": 5647,
+                "name": "Leuwisadeng, Kab. Bogor, Jawa Barat"
+            },
+            "zip": "",
+            "kartu_keluarga": "",
+            "bpjs": "",
+            "bpjs_tk": "",
+            "ktp": "3201391105970002",
+            "ktp_address": "KP. BABAKAN SADENG 001/005 LEUWISADENG - BOGOR",
+            "marriage": 0,
+            "husband_wife_name": "",
+            "children": 0,
+            "sex": "Male",
+            "religion": "Islam",
+            "place_of_birth": "BOGOR",
+            "date_of_birth": "1997-01-11",
+            "npwp": "3201391105970002",
+            "npwp_status": "TK0",
+            "license_no": "970513256721",
+            "license_type": "B2 Umum",
+            "license_city_id": {
+                "id": 5647,
+                "name": "Leuwisadeng, Kab. Bogor, Jawa Barat"
+            },
+            "license_issue_date": null,
+            "license_exp_date": null,
+            "license_card": 1,
+            "license_on_hold": 0,
+            "license_handover_date": null,
+            "parent_id": {
+                "id": 0,
+                "code": "",
+                "name": "",
+                "status": 0
+            },
+            "status_employee": "Mitra Kerja",
+            "status_expired_date": null,
+            "bank_id": {
+                "id": 133,
+                "name": "Bank BCA",
+                "swift": "Bank BCA"
+            },
+            "bank_name": "Bank BCA",
+            "bank_no": "6820997831",
+            "bank_account_name": "LALAN",
+            "join_date": "2023-02-03",
+            "resign_date": null,
+            "resign_memo": "",
+            "pass_code": "",
+            "status": 1,
+            "employee_skorsing": null,
+            "employee_loan": null,
+            "employee_memo_pot_current": null,
+            "employee_memo_pot": null,
+            "image_data": "data:image/jpeg;base64,/9j/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFC/9k="
+        },
+        "secondary_status": 0,
+        "product_list": null,
+        "statement_lists": null,
+        "image_data": [
+            {
+                "id": 1,
+                "image_data": "data:image/jpeg;base64,/9j/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFC"
+            }
+        ]
+    }
+}
