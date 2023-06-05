@@ -1,9 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:sgmobile/bussiness_logic/model/SJ_Model.dart';
 import 'package:sgmobile/ui/component/sales/daftar_jadwal/image_logo_handle.dart';
+import 'package:sgmobile/utils/bulid_row.dart';
 import 'package:sgmobile/utils/colors_style.dart';
 import 'package:sgmobile/utils/divider_style.dart';
 import 'package:sgmobile/utils/text_style.dart';
@@ -16,11 +18,28 @@ class SJDetailContentDriver extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Informasi Driver',
-          style: TextStyles.bold16Black,
+      Row(
+          children: [
+            SvgPicture.asset('assets/icon-svg/SteeringWheel.svg'),
+            SizedBox(width: 2),
+            const Text(
+              'Info Driver',
+              style: TextStyles.bold16Black,
+            ),
+          ],
         ),
-        Padding(
+        BuildRow().buildRow(
+          'No Kendaraan', detail.data.fleet_id.plateNo
+        ),
+        Container(
+          height: Get.height*0.25,
+          width: Get.width,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            border: Border.all(color: ColorStyle.goldLight)
+          ),
+          // color: ColorStyle.goldLight,
+          child: Padding(
           padding: const EdgeInsets.only(top: 4.0),
           child: (detail.data.primary_status == 1)
               ? Row(
@@ -248,7 +267,10 @@ class SJDetailContentDriver extends StatelessWidget {
                   ],
                 ),
         ),
-      ],
+      
+        ),
+
+        ],
     );
   }
 }

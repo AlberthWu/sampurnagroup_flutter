@@ -68,12 +68,12 @@ class DetailSJPage extends StatelessWidget {
                           DividerStyles.divider,
                           Padding(
                             padding: const EdgeInsets.all(16.0),
-                            child: SJDetailContentTransaksi(detail),
+                            child: SJDetailContentDriver(detail),
                           ),
                           DividerStyles.divider,
                           Padding(
                             padding: const EdgeInsets.all(16.0),
-                            child: SJDetailContentDriver(detail),
+                            child: SJDetailContentTransaksi(detail),
                           ),
                           DividerStyles.divider,
                           Padding(
