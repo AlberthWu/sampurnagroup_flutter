@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:sgmobile/bussiness_logic/model/SJ_Model.dart';
 import 'package:sgmobile/utils/bulid_row.dart';
+import 'package:sgmobile/utils/currency.dart';
 import 'package:sgmobile/utils/divider_style.dart';
 import 'package:sgmobile/utils/text_style.dart';
 
@@ -14,37 +17,101 @@ class SJDetailContentTransaksi extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          'Rincian Transaksi',
-          style: TextStyles.bold16Black,
+        Row(
+          children: [
+            SvgPicture.asset('assets/icon-svg/receipt1.svg'),
+            SizedBox(width: 2),
+            const Text(
+              ' Rincian Transaksi',
+              style: TextStyles.bold16Black,
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 8,
         ),
         Padding(
           padding: const EdgeInsets.only(top: 4, bottom: 4),
-          child: BuildRow()
-              .buildRow("Jenis Transaksi", detail.data.order_type_id.name),
+          child: 
+          BuildRow().buildRow("Jenis Transaksi", detail.data.order_type_id.name),
         ),
-        BuildRow().buildRow("Tanggal Terima", detail.data.receive_date ?? ""),
         Padding(
-          padding: const EdgeInsets.only(top: 4),
+          padding: const EdgeInsets.only(top: 4, bottom: 4),
+          child: 
+          BuildRow().buildRow("Tanggal Transaksi", detail.data.confirm_ujt_date.toString()),
+        ),
+         Padding(
+          padding: const EdgeInsets.only(top: 4, bottom: 4),
+          child: 
+          BuildRow().buildRow("UJT", formatCurrency(detail.data.ujt.toInt())),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 4, bottom: 0),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              const Text(
-                "Tujuan",
-                style: TextStyles.light13Black,
-              ),
-              const SizedBox(width: 70),
-              Expanded(
-                child: Text(
-                  detail.data.plant_id.fullName,
-                  style: TextStyles.light13Black,
-                  maxLines: 4,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.end,
+              Container(
+                width: Get.width * 0.55,
+                height: Get.height * 0.0850,
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                          color: Color.fromARGB(35, 14, 13, 13),
+                          offset: Offset(0, 0),
+                          blurRadius: 9,
+                          spreadRadius: 2,
+                          blurStyle: BlurStyle.normal)
+                    ]),
+                child: Padding(
+                  padding: const EdgeInsets.all(9.0),
+                  child:
+                      Column(
+                        children: [
+                          BuildRow().buildRowTransaksi("Selisih Operan", formatCurrency(100000)),
+                          BuildRow().buildRowTransaksi("Bonus Potongan", formatCurrency(50000)),
+                          BuildRow().buildRowTransaksiDetail("", "Lihat semua"),
+                        ],
+                      ),
                 ),
+                
               ),
             ],
           ),
+        ),
+        SizedBox(
+          height: 8,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 4, bottom: 4),
+          child: 
+          BuildRow().buildRow("Biaya Lift Off", formatCurrency(0)),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 4, bottom: 4),
+          child: 
+          BuildRow().buildRow("Biaya Loading", formatCurrency(0)),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 4, bottom: 4),
+          child: 
+          BuildRow().buildRow("Biaya Kawal", formatCurrency(400000)),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 4, bottom: 4),
+          child: 
+          BuildRow().buildRow("Biaya Tambahan", formatCurrency(200000)),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 4, bottom: 4),
+          child: 
+          BuildRow().buildRow("Memo Tambahan", 'Mohon tinggalkan memo...'),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 4, bottom: 4),
+          child: 
+          BuildRow().buildRowTotalTransaksi("Total UJT", formatCurrency(1100000)),
         ),
       ],
     );

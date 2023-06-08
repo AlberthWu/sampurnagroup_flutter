@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:sgmobile/bussiness_logic/model/schedule_detail_model.dart';
 import 'package:sgmobile/utils/bulid_row.dart';
 import 'package:sgmobile/utils/divider_style.dart';
@@ -16,9 +17,18 @@ class NewSJContentProduk extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              "Detail Produk",
-              style: TextStyles.bold16Black,
+            Row(
+              children: [
+                SvgPicture.asset('assets/icon-svg/truck(1).svg'),
+                SizedBox(width: 2),
+                Text(
+                  " Detail Produk",
+                  style: TextStyles.bold16Black,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 8,
             ),
             Padding(
               padding: const EdgeInsets.only(top: 4, bottom: 4),
@@ -29,7 +39,6 @@ class NewSJContentProduk extends StatelessWidget {
                 .buildRow("Jenis Armada", item?.data.fleet_type_id.name ?? ""),
           ],
         ),
-        DividerStyles.divider,
       ],
     );
   }

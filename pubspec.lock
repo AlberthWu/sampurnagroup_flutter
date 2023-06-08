@@ -113,6 +113,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  d_input:
+    dependency: "direct main"
+    description:
+      name: d_input
+      sha256: ccf5a3b184d275bd20bd9658c0342bb08c7b09e503073df050bf190015d222be
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.9"
   dio:
     dependency: "direct main"
     description:
@@ -533,6 +541,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.5.1"
+  text_form_field_wrapper:
+    dependency: "direct main"
+    description:
+      name: text_form_field_wrapper
+      sha256: "9ec8f9af0021a692a35699f5756d7b7f140eaa1e6894ff86c357f50dc5474b88"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   typed_data:
     dependency: transitive
     description:

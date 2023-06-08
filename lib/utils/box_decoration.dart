@@ -14,7 +14,7 @@ class BoxDecorationStyles {
       ],
       color: ColorStyle.white);
   final boxDecorationButton = const BoxDecoration(
-    color: ColorStyle.greyDark,
+    color: ColorStyle.redPrimary,
     borderRadius: BorderRadius.all(
       Radius.circular(5),
     ),

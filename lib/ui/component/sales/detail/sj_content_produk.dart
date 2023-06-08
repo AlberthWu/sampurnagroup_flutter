@@ -20,10 +20,13 @@ class SJDetailContentProduk extends StatelessWidget {
             SvgPicture.asset('assets/icon-svg/truck(1).svg'),
             SizedBox(width: 2),
             Text(
-              "Detail Produk",
+              " Detail Produk",
               style: TextStyles.bold16Black,
             ),
           ],
+        ),
+        SizedBox(
+          height: 8,
         ),
         Padding(
           padding: const EdgeInsets.only(top: 8, bottom: 4),

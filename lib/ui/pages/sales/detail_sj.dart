@@ -10,6 +10,8 @@ import 'package:sgmobile/ui/component/sales/detail/sj_content_produk.dart';
 import 'package:sgmobile/ui/component/sales/detail/sj_content_status.dart';
 import 'package:sgmobile/ui/component/sales/detail/sj_content_transaksi.dart';
 import 'package:sgmobile/ui/component/sales/detail/sj_content_ujt.dart';
+import 'package:sgmobile/ui/component/sales/detail/sj_content_quantity.dart';
+import 'package:sgmobile/ui/component/sales/detail/sj_content_dokumen.dart';
 import 'package:sgmobile/utils/button_style.dart';
 import 'package:sgmobile/utils/colors_style.dart';
 import 'package:sgmobile/utils/divider_style.dart';
@@ -78,8 +80,18 @@ class DetailSJPage extends StatelessWidget {
                           DividerStyles.divider,
                           Padding(
                             padding: const EdgeInsets.all(16.0),
+                            child: SJDetailContentDokumen(detail),
+                          ),
+                          DividerStyles.divider,
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
                             child: SJDetailContentUJT(detail),
-                          )
+                          ),
+                          DividerStyles.divider,
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: SJDetailContentQuantity(detail),
+                          ),
                         ],
                       )
                     ],

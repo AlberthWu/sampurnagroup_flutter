@@ -36,7 +36,7 @@ class ListDaftarJadwal extends StatelessWidget {
             Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  height: Get.height * 0.175,
+                  height: Get.height * 0.21,
                   width: Get.width,
                   decoration: BoxDecorationStyles().cardBoxStyle,
                   padding: EdgeInsets.all(8),
@@ -51,7 +51,7 @@ class ListDaftarJadwal extends StatelessWidget {
                             children: [
                               Text(
                                 item.schedule_no,
-                                style: TextStyles.bold13Black,
+                                style: TextStyles.bold14Black,
                               ),
                               Text(
                                 item.issue_date,
@@ -59,23 +59,49 @@ class ListDaftarJadwal extends StatelessWidget {
                               )
                             ],
                           ),
-                          Container(
-                            height: Get.height * 0.03,
-                            width: Get.width * 0.25,
-                            decoration: BoxDecoration(
-                                color: item.urgent == 1
-                                    ? ColorStyle.redVeryLight
-                                    : ColorStyle.goldVeryLight,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5))),
-                            child: Center(
-                              child: Text(
-                                item.urgent == 1 ? "Urgent" : "Reguler",
-                                style: (item.urgent == 1)
-                                    ? TextStyles.bold13Red
-                                    : TextStyles.bold13Gold,
+                          Row(
+                            children: [
+                              (item.actual == 0)
+                                  ? Text(
+                                      '${item.actual * -1} / ${item.total_do}',
+                                      style: TextStyles.bold15Grey,
+                                    )
+                                  : GestureDetector(
+                                      onTap: () {
+                                        showModalBottomSheet(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return ListOrderList(item);
+                                          },
+                                        );
+                                      },
+                                      child: Text(
+                                        '${item.actual * -1} / ${item.total_do}',
+                                        style: TextStyles.bold15Grey,
+                                      ),
+                                    ),
+                              SizedBox(
+                                width: 5,
                               ),
-                            ),
+                              Container(
+                                height: Get.height * 0.03,
+                                width: Get.width * 0.25,
+                                decoration: BoxDecoration(
+                                    color: item.urgent == 1
+                                        ? ColorStyle.redVeryLight
+                                        : ColorStyle.goldVeryLight,
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(5))),
+                                child: Center(
+                                  child: Text(
+                                    item.urgent == 1 ? "Urgent" : "Reguler",
+                                    style: (item.urgent == 1)
+                                        ? TextStyles.bold13Red
+                                        : TextStyles.bold13Gold,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -110,39 +136,39 @@ class ListDaftarJadwal extends StatelessWidget {
                             ),
                             Row(
                               children: [
-                                (item.actual == 0)
-                                    ? Container(
-                                        height: Get.height * 0.03,
-                                        width: Get.width * 0.25,
-                                        decoration: const BoxDecoration(
-                                            color: ColorStyle.greyPrimary,
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(5))),
-                                        child: Center(
-                                            child: Text(
-                                          '${item.actual * -1} / ${item.total_do}',
-                                          style: TextStyles.bold13White,
-                                        )))
-                                    : GestureDetector(
-                                        onTap: () {
-                                          showModalBottomSheet(
-                                            context: context,
-                                            builder: (BuildContext context) {
-                                              return ListOrderList(item);
-                                            },
-                                          );
-                                        },
-                                        child: Container(
-                                            height: Get.height * 0.03,
-                                            width: Get.width * 0.25,
-                                            decoration: BoxDecorationStyles()
-                                                .boxDecorationButton,
-                                            child: Center(
-                                                child: Text(
-                                              '${item.actual * -1} / ${item.total_do}',
-                                              style: TextStyles.bold13White,
-                                            ))),
-                                      ),
+                                // (item.actual == 0)
+                                //     ? Container(
+                                //         height: Get.height * 0.03,
+                                //         width: Get.width * 0.25,
+                                //         decoration: const BoxDecoration(
+                                //             color: ColorStyle.greyPrimary,
+                                //             borderRadius: BorderRadius.all(
+                                //                 Radius.circular(5))),
+                                //         child: Center(
+                                //             child: Text(
+                                //           '${item.actual * -1} / ${item.total_do}',
+                                //           style: TextStyles.bold13White,
+                                //         )))
+                                //     : GestureDetector(
+                                //         onTap: () {
+                                //           showModalBottomSheet(
+                                //             context: context,
+                                //             builder: (BuildContext context) {
+                                //               return ListOrderList(item);
+                                //             },
+                                //           );
+                                //         },
+                                //         child: Container(
+                                //             height: Get.height * 0.03,
+                                //             width: Get.width * 0.25,
+                                //             decoration: BoxDecorationStyles()
+                                //                 .boxDecorationButton,
+                                //             child: Center(
+                                //                 child: Text(
+                                //               '${item.actual * -1} / ${item.total_do}',
+                                //               style: TextStyles.bold13White,
+                                //             ))),
+                                //       ),
                                 SizedBox(
                                   width: 5,
                                 ),
@@ -171,7 +197,7 @@ class ListDaftarJadwal extends StatelessWidget {
                                           .boxDecorationButton,
                                       child: const Center(
                                         child: Text(
-                                          'Buat SJ',
+                                          'Create SJ',
                                           style: TextStyles.bold13White,
                                         ),
                                       ),

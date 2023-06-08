@@ -19,10 +19,13 @@ class SJDetailContentPengiriman extends StatelessWidget {
             SvgPicture.asset('assets/icon-svg/directboxsend.svg'),
             SizedBox(width: 2),
             const Text(
-              'Info Pengiriman',
+              ' Info Pengiriman',
               style: TextStyles.bold16Black,
             ),
           ],
+        ),
+        SizedBox(
+          height: 8,
         ),
         Padding(
           padding: const EdgeInsets.only(top: 4, bottom: 4),

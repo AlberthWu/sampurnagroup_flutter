@@ -24,14 +24,14 @@ class SJDetailContentPerusahaan extends StatelessWidget {
                   SvgPicture.asset('assets/icon-svg/building.svg'),
                   SizedBox(width: 2),
                   const Text(
-                    "Detail Perusahaan",
+                    " Detail Perusahaan",
                     style: TextStyles.bold16Black,
                   ),
                 ],
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 8,
             ),
             Padding(
               padding: const EdgeInsets.only(top: 4, bottom: 0),
@@ -43,10 +43,10 @@ class SJDetailContentPerusahaan extends StatelessWidget {
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                          color: Color.fromARGB(36, 213, 211, 211),
+                          color: Color.fromARGB(35, 14, 13, 13),
                           offset: Offset(0, 0),
                           blurRadius: 9,
-                          spreadRadius: 4,
+                          spreadRadius: 2,
                           blurStyle: BlurStyle.normal)
                     ]),
                 child: Padding(

@@ -49,7 +49,7 @@ class ListOrderList extends StatelessWidget {
                       ],
                       color: ColorStyle.white),
                   width: Get.width,
-                  height: Get.height * 0.115,
+                  height: Get.height * 0.13,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(

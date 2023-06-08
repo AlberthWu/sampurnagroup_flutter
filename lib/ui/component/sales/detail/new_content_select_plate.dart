@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:sgmobile/bussiness_logic/controller/SJ_Controller.dart';
 import 'package:sgmobile/bussiness_logic/model/fleet_model.dart';
@@ -9,6 +10,8 @@ import 'package:sgmobile/bussiness_logic/model/schedule_detail_model.dart';
 import 'package:sgmobile/bussiness_logic/model/ujt_model.dart';
 import 'package:sgmobile/utils/colors_style.dart';
 import 'package:sgmobile/utils/text_style.dart';
+
+import '../../../../utils/bulid_row.dart';
 
 class NewSJContentSelectPlate extends StatelessWidget {
   const NewSJContentSelectPlate({
@@ -34,6 +37,23 @@ class NewSJContentSelectPlate extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Row(
+          children: [
+            SvgPicture.asset('assets/icon-svg/SteeringWheel.svg'),
+            SizedBox(width: 2),
+            const Text(
+              ' Info Driver',
+              style: TextStyles.bold16Black,
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 8,
+        ),
+        BuildRow().buildRowDriver('No Kendaraan', item.data.fleet_id.plateNo),
+        SizedBox(
+          height: 9,
+        ),
         Padding(
           padding: const EdgeInsets.only(top: 4, bottom: 4),
           child: DropdownSearch<DataFleet>(
@@ -52,7 +72,7 @@ class NewSJContentSelectPlate extends StatelessWidget {
             selectedItem: controller.selectedPlateNo.value,
             dropdownSearchBaseStyle: TextStyles.bold13Black,
             dropdownSearchDecoration: const InputDecoration(
-              hintText: "Cari Nomor Plat",
+              hintText: "Pilih nomor polisi kendaraan",
               counterStyle: TextStyles.bold13Grey,
               border: OutlineInputBorder(),
               contentPadding: EdgeInsets.symmetric(horizontal: 8),

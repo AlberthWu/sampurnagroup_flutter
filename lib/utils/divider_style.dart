@@ -11,4 +11,8 @@ class DividerStyles {
     thickness: 5,
     color: ColorStyle.greyDivider,
   );
+  static const divider2 = Divider(
+    thickness: 1.5,
+    color: ColorStyle.greyDivider2,
+  );
 }

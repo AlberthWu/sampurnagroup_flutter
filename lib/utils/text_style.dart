@@ -105,6 +105,11 @@ class TextStyles {
       fontWeight: FontWeight.bold,
       color: ColorStyle.greyDark,
       fontSize: 18);
+  static const bold15Grey = TextStyle(
+      fontFamily: 'nexa',
+      fontWeight: FontWeight.bold,
+      color: ColorStyle.greyDark,
+      fontSize: 15);
   static const bold14Grey = TextStyle(
       fontFamily: 'nexa',
       fontWeight: FontWeight.bold,
@@ -115,4 +120,15 @@ class TextStyles {
       fontWeight: FontWeight.bold,
       color: ColorStyle.greyPrimary,
       fontSize: 13);
+  static const italic12Grey = TextStyle(
+      fontFamily: 'nexa',
+      fontWeight: FontWeight.normal,
+      color: Color.fromARGB(255, 8, 8, 8),
+      fontSize: 12,
+      fontStyle: FontStyle.italic);
+  static const light12Blue = TextStyle(
+      fontFamily: 'nexa',
+      fontWeight: FontWeight.normal,
+      color: Color.fromARGB(255, 10, 122, 197),
+      fontSize: 12);
 }

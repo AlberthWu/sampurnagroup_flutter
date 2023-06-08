@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sgmobile/bussiness_logic/controller/SJ_Controller.dart';
 import 'package:sgmobile/ui/component/sales/daftar_jadwal/app_bar_SJ_baru.dart';
-import 'package:sgmobile/ui/component/sales/detail/new_content_pelanggan.dart';
+import 'package:sgmobile/ui/component/sales/detail/new_content_pengiriman.dart';
 import 'package:sgmobile/ui/component/sales/detail/new_content_perusahaan.dart';
 import 'package:sgmobile/ui/component/sales/detail/new_content_produk.dart';
 import 'package:sgmobile/ui/component/sales/detail/new_content_select_driver.dart';
 import 'package:sgmobile/ui/component/sales/detail/new_content_select_plate.dart';
 import 'package:sgmobile/ui/component/sales/detail/new_content_transaksi.dart';
 import 'package:sgmobile/utils/colors_style.dart';
+
+import '../../../utils/divider_style.dart';
 
 class CreateSJPage extends StatelessWidget {
   const CreateSJPage(int id, {Key? key}) : super(key: key);
@@ -43,7 +45,7 @@ class CreateSJPage extends StatelessWidget {
                 return Column(
                   children: [
                     NewSJContentPerusahaan(item: item),
-                    NewSJContentPelanggan(item: item),
+                    NewSJContentPengiriman(item: item),
                     NewSJContentProduk(item: item),
                     NewSJContentTransaksi(item: item, ujt),
                     NewSJContentSelectPlate(

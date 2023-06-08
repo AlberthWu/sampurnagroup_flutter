@@ -3,13 +3,18 @@ import 'package:get/get.dart';
 import 'package:sgmobile/bussiness_logic/controller/SJ_Controller.dart';
 import 'package:sgmobile/bussiness_logic/model/SJ_Model.dart';
 import 'package:sgmobile/ui/component/sales/daftar_jadwal/app_bar_SJ_baru.dart';
-import 'package:sgmobile/ui/component/sales/detail/new_content_pelanggan.dart';
+import 'package:sgmobile/ui/component/sales/detail/new_content_pengiriman.dart';
 import 'package:sgmobile/ui/component/sales/detail/new_content_perusahaan.dart';
 import 'package:sgmobile/ui/component/sales/detail/new_content_produk.dart';
 import 'package:sgmobile/ui/component/sales/detail/new_content_select_driver.dart';
 import 'package:sgmobile/ui/component/sales/detail/new_content_select_plate.dart';
 import 'package:sgmobile/ui/component/sales/detail/new_content_transaksi.dart';
+import 'package:sgmobile/ui/component/sales/detail/new_content_status.dart';
+import 'package:sgmobile/ui/component/sales/detail/new_content_dokumen.dart';
+import 'package:sgmobile/ui/component/sales/detail/new_content_quantity.dart';
 import 'package:sgmobile/utils/colors_style.dart';
+
+import '../../../utils/divider_style.dart';
 
 class DraftSJ extends StatelessWidget {
   const DraftSJ(this.detail, {Key? key}) : super(key: key);
@@ -41,43 +46,123 @@ class DraftSJ extends StatelessWidget {
           appBar: AppBarNewSJ().draftSJ,
           body: ListView(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  children: [
-                    NewSJContentPerusahaan(item: detail),
-                    NewSJContentPelanggan(item: detail),
-                    NewSJContentProduk(item: detail),
-                    NewSJContentTransaksi(ujt, item: detail),
-                    NewSJContentSelectPlate(
+              Column(
+                children: [
+                  NewSJContentStatus(item: detail),
+                  DividerStyles.divider,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                    child: NewSJContentPerusahaan(item: detail),
+                  ),
+                  DividerStyles.divider,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                    child: NewSJContentProduk(item: detail),
+                  ),
+                  DividerStyles.divider,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                    child: NewSJContentPengiriman(item: detail),
+                  ),
+                  DividerStyles.divider,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                    child: NewSJContentSelectPlate(
                       item: detail,
                       ujt: ujt,
                       listFleet: listFleet,
                       selectedPlateNo: selectedPlateNo,
                     ),
-                    NewSJContentSelectDriver(
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                    child: NewSJContentSelectDriver(
                       primaryStatusTemp: primaryStatusTemp.toInt(),
                       secondaryStatusTemp: secondaryStatusTemp.toInt(),
                       selectedDriverId: selectedDriverId,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 8.0),
-                      child: Container(
-                        child: TextButton(
-                          child: const Text('Ubah Data'),
-                          onPressed: () async {
-                            if (!controller.isButtonLoading.value) {
-                              await controller
-                                  .putSJBaru(detail.data.id.toInt());
-                              await controller.getStatusUpdate(
-                                  detail.data.id.toInt(), 1);
-                            }
-                          },
-                        ),
+                  ),
+                  DividerStyles.divider,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                    child: NewSJContentTransaksi(ujt, item: detail),
+                  ),
+                  DividerStyles.divider,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                    child: NewSJContentDokumen(ujt, item: detail),
+                  ),
+                  DividerStyles.divider,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                    child: NewSJContentQuantity(ujt, item: detail),
+                  ),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        width: Get.width * 0.44,
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: const Color.fromARGB(
+                                  255, 201, 201, 201), // Background color
+                              onPrimary: Colors.black,
+                            ),
+                            onPressed: () {},
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text('Tolak'),
+                              ],
+                            )),
                       ),
-                    ),
-                  ],
-                ),
+                      Container(
+                        width: Get.width * 0.44,
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.red, // Background color
+                              onPrimary: Colors.white,
+                            ),
+                            onPressed: () async {
+                              if (!controller.isButtonLoading.value) {
+                                await controller
+                                    .putSJBaru(detail.data.id.toInt());
+                                await controller.getStatusUpdate(
+                                    detail.data.id.toInt(), 1);
+                              }
+                            },
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text('Terima'),
+                              ],
+                            )),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  // Padding(
+                  //   padding: const EdgeInsets.only(top: 8.0),
+                  //   child: Container(
+                  //     child: TextButton(
+                  //       child: const Text('Ubah Data'),
+                  //       onPressed: () async {
+                  //         if (!controller.isButtonLoading.value) {
+                  //           await controller
+                  //               .putSJBaru(detail.data.id.toInt());
+                  //           await controller.getStatusUpdate(
+                  //               detail.data.id.toInt(), 1);
+                  //         }
+                  //       },
+                  //     ),
+                  //   ),
+                  // ),
+                ],
               )
             ],
           )),

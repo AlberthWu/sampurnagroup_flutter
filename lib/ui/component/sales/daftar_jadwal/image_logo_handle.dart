@@ -14,8 +14,8 @@ class ImageHandle<T> extends StatelessWidget {
   };
 
   static const Map<int, double> companyLogoScales = {
-    2: 27,
-    4: 27,
+    2: 35,
+    4: 35,
     3: 20,
   };
 

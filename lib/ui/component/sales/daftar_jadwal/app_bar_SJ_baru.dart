@@ -37,6 +37,9 @@ class AppBarNewSJ {
       "Surat Jalan Baru",
       style: TextStyles.bold18Grey,
     ),
+    actions: [
+      Icon(Icons.save),
+    ],
     backgroundColor: ColorStyle.white,
   );
 }

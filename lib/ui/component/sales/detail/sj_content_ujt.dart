@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sgmobile/bussiness_logic/controller/SJ_Controller.dart';
 import 'package:sgmobile/bussiness_logic/model/SJ_Model.dart';
@@ -22,35 +23,77 @@ class SJDetailContentUJT extends StatelessWidget {
             ? Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  DividerStyles.divider,
+                  // DividerStyles.divider,
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(detail.data.id.toString()),
-                      const Text(
-                        'Informasi UJT',
-                        style: TextStyles.bold16Black,
-                      ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          ElevatedButton(
-                              onPressed: () {
-                                controller.openGallery();
-                              },
-                              child: Text('Pilih Foto')),
-                          ElevatedButton(
-                              onPressed: () {}, child: Text('Ambil Foto')),
+                          SvgPicture.asset('assets/icon-svg/gallery.svg'),
+                          SizedBox(width: 2),
+                          const Text(
+                            ' Bukti Foto',
+                            style: TextStyles.bold16Black,
+                          ),
                         ],
                       ),
+                      SizedBox(height: 10,),
                       Obx(
-                        () => Column(
-                          children: [
-                            for (final imageFile in controller.imageDataList)
-                              Image.file(File(imageFile.path)),
-                          ],
+                        () => Container(
+                          child: Column(
+                            children: [
+                              for (final imageFile in controller.imageDataList)
+                                Container(
+                                  color: Colors.amber,
+                                  width: Get.width*0.25,
+                                  height: Get.height*0.15,
+                                  child: Image.file(File(imageFile.path),fit: BoxFit.cover,)),
+                            ],
+                          ),
                         ),
+                      ),
+                      SizedBox(height: 10,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: Get.width*0.425,
+                            child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  // primary: Colors.red, // Background color
+                                  onPrimary: Colors.black,
+                                ),
+                                onPressed: () {}, child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.camera, size: 20,),
+                                    Text(' Camera'),
+                                  ],
+                                )),
+                          ),
+                          Container(
+                            width: Get.width*0.425,
+                            child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  // primary: Colors.red, // Background color
+                                  onPrimary: Colors.black,
+                                ),
+                                onPressed: () {
+                                  controller.openGallery();
+                                },
+                                child: 
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.image, size: 20,),
+                                    Text(' Gallery'),
+                                  ],
+                                )),
+                          ),
+                        ],
                       ),
                       TextButton(
                         onPressed: () {
@@ -74,22 +117,56 @@ class SJDetailContentUJT extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "Informasi UJT",
-                        style: TextStyles.bold16Black,
+                      Row(
+                        children: [
+                          SvgPicture.asset('assets/icon-svg/gallery.svg'),
+                          SizedBox(width: 2),
+                          const Text(
+                            ' Bukti Foto',
+                            style: TextStyles.bold16Black,
+                          ),
+                        ],
                       ),
-
                       ///
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          ElevatedButton(
-                              onPressed: () {
-                                controller.openGallery();
-                              },
-                              child: Text('Pilih Foto')),
-                          ElevatedButton(
-                              onPressed: () {}, child: Text('Ambil Foto')),
+                          Container(
+                            width: Get.width*0.425,
+                            child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  // primary: Colors.red, // Background color
+                                  onPrimary: Colors.black,
+                                ),
+                                onPressed: () {}, child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.camera, size: 20,),
+                                    Text(' Camera'),
+                                  ],
+                                )),
+                          ),
+                          Container(
+                            width: Get.width*0.425,
+                            child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  // primary: Colors.red, // Background color
+                                  onPrimary: Colors.black,
+                                ),
+                                onPressed: () {
+                                  controller.openGallery();
+                                },
+                                child: 
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.image, size: 20,),
+                                    Text(' Gallery'),
+                                  ],
+                                )),
+                          ),
                         ],
                       ),
                       Obx(

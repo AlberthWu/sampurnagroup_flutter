@@ -10,6 +10,7 @@ class ColorStyle {
   static const greyLight = Color.fromARGB(255, 188, 188, 188);
   static const greyVeryLight = Color.fromARGB(105, 213, 211, 211);
   static const greyDivider = Color.fromARGB(146, 244, 244, 244);
+  static const greyDivider2 = Color.fromARGB(146, 212, 212, 212);
 
   static const goldPrimary = Color.fromARGB(255, 214, 137, 0);
   static const goldStatus = Color.fromARGB(255, 173, 125, 0);
