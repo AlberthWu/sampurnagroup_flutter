@@ -4,6 +4,7 @@ import 'package:sgmobile/bussiness_logic/controller/SJ_Controller.dart';
 import 'package:sgmobile/bussiness_logic/model/schedule_model.dart';
 import 'package:sgmobile/ui/component/sales/daftar_jadwal/image_logo_handle.dart';
 import 'package:sgmobile/ui/component/sales/daftar_jadwal/list_order_list.dart';
+import 'package:sgmobile/ui/component/sales/detail/daftar_jadwal_detail.dart';
 import 'package:sgmobile/ui/pages/sales/detail_sj.dart';
 import 'package:sgmobile/ui/pages/sales/new_sj.dart';
 import 'package:sgmobile/utils/box_decoration.dart';
@@ -68,12 +69,12 @@ class ListDaftarJadwal extends StatelessWidget {
                                     )
                                   : GestureDetector(
                                       onTap: () {
-                                        showModalBottomSheet(
-                                          context: context,
-                                          builder: (BuildContext context) {
-                                            return ListOrderList(item);
-                                          },
-                                        );
+                                        // showModalBottomSheet(
+                                        //   context: context,
+                                        //   builder: (BuildContext context) {
+                                        //     return ListOrderList(item);
+                                        //   },
+                                        // );
                                       },
                                       child: Text(
                                         '${item.actual * -1} / ${item.total_do}',
@@ -101,6 +102,22 @@ class ListDaftarJadwal extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              GestureDetector(
+                                child: Icon(Icons.more_vert),
+                                onTap: () {
+                                  Get.to(() => DaftarJadwalDetail(item));
+                                },
+                              )
+                              // IconButton(
+                              //   padding: EdgeInsets.all(0),
+                              //   onPressed: () {
+                              //     Get.to(() => DaftarJadwalDetail());
+                              //   },
+                              //   icon: Icon(
+                              //     Icons.ac_unit_outlined,
+                              //     size: 20,
+                              //   ),
+                              // )
                             ],
                           ),
                         ],
